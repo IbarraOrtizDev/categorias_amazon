@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/gh/pgrabovets/json-view@master/dist/jsonview.js"></script>
+    <style>
+        .line {
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="root"></div>
+    <script src="./fileDataHtml.js"></script>
+    <script>
+        console.log(data);
+        const tree = jsonview.create(data);
+        jsonview.render(tree, document.querySelector('.root'));
+        //jsonview.expand(tree);
+    </script>
+</body>
+</html>
